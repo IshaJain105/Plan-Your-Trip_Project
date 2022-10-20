@@ -1,0 +1,128 @@
+<div id="invoice">
+
+    <div id="top">
+        <div class="logo"></div>
+        <div class="info">
+            <h2>Plan Your Trip</h2>
+        </div>
+    </div>
+    <div id="mid" class="mt-2">
+        <div class="info">
+            <h2>Contact Info</h2>
+            <p>
+                <strong>Address : </strong> {{booking.address}}<br>
+                <strong>Email : </strong>{{booking.email}}<br>
+                <strong>Phone : </strong> {{booking.phoneNumber}}<br>
+            </p>
+        </div>
+    </div>
+
+    <div id="bot">
+
+        <div id="table">
+            <table>
+                <thead>Pacakge Details: </thead>
+                <tr class="tabletitle ">
+                    <td>
+                        <h6>Name</h6>
+                    </td>
+                    <td>
+                        <h6>Base Price</h6>
+                    </td>
+                    <td>
+                        <h6>Activity Price</h6>
+                    </td>
+                    <td>
+                        <h6>Flight</h6>
+                    </td>
+                    <td>
+                        <h6>Hotel</h6>
+                    </td>
+                    <td>
+                        <h6>Sub Total</h6>
+                    </td>
+
+                </tr>
+
+                <tr class="tableitem">
+                    <td>
+                        <p>{{package.cityName}}</p>
+                    </td>
+                    <td>
+                        <p>$ {{package.price}}</p>
+                    </td>
+                    <td>
+                        <p>$ {{finalTotal}}</p>
+                    </td>
+                    <td>
+                        <p>$ 95.6</p>
+                    </td>
+                    <td>
+                        <p>$ 25.6</p>
+                    </td>
+                    <td>
+                        <p>$ {{subtotal}}</p>
+                    </td>
+
+
+                </tr>
+                <thead>Other Details: </thead>
+                <tr class="tabletitle ">
+                    <td>
+                        <h6>Name</h6>
+                    </td>
+                    <td>
+                        <h6>Date of Booking</h6>
+                    </td>
+                    <td>
+                        <h6>No. of People</h6>
+                    </td>
+                    <td>
+                        <h6>Activities</h6>
+                    </td>
+                    <td>
+                        <h6>Tax</h6>
+                    </td>
+                    <td>
+                        <h6>Total</h6>
+                    </td>
+
+                </tr>
+
+                <tr class="tableitem">
+                    <td>
+                        <p>{{booking.name}}</p>
+                    </td>
+                    <td>
+                        <p>{{booking.date}}</p>
+                    </td>
+                    <td>
+                        <p>{{booking.totalPeople}}</p>
+                    </td>
+                    <td>
+                        <p *ngFor="let activity of package.activities">{{activity.activityName}} <br></p>
+                    </td>
+                    <td>
+                        <p>$ {{tax}}</p>
+                    </td>
+                    <td>
+                        <p>$ {{booking.totalPrice}}</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="legalcopy">
+            <p class="legal"><strong>Thank you for your business!</strong> Payment is expected within 31 days; please
+                process this invoice within that time. There will be a 5% interest charge per month on late invoices.
+            </p>
+        </div>
+        <h2 class="text-center">
+            Thank You For Choosing Us!
+        </h2>
+        <div class="buttons w-100 text-center">
+            <a class="btn btn-dark" routerLink="/homepage">Back Home</a>
+        </div>
+
+    </div>
+</div>

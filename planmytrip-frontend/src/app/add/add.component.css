@@ -1,0 +1,42 @@
+input{
+    width: 25vw;
+}
+select{
+    width: 25vw;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+option{
+    text-align: center;
+    border: 1px solid black;
+    height: 2vmax;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+option:checked{
+    background-color: rgb(104, 144, 219);
+}
+.row1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+    align-items: center;
+}
+::-webkit-scrollbar {
+    -webkit-appearance:none;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: rgba(200, 200, 200, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(138, 119, 119, 0.5);
+}

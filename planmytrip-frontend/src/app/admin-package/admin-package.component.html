@@ -1,0 +1,64 @@
+<section>
+    <div class="top">
+        <div class="img"></div>
+        <div class="text ">
+            <h1>{{package.cityName}} <a class="edit" (click)="updatePackage(package.id)" 
+              style="text-decoration :none; "> ✏️</a></h1>
+            <h3>Price: <br> $ {{package.price}}</h3>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="left">
+                <div class="a">
+                    <h3>Activities: </h3>
+                    <div class="activity_list mb-2" *ngFor="let activity of package.activities">
+                        {{activity.activityName}} | $ {{activity.activityPrice}} 
+                    </div>
+                </div>
+                <div class="i">
+                  <h3>Area Of Interest: </h3>
+                  <div class="activity_list mb-2" *ngFor="let interest of package.areaOfInterest">
+                      {{interest.name}}  
+                  </div>
+              </div>
+              <div class="t">
+                <h3>Category: </h3>
+                <div class="activity_list mb-2" *ngFor="let type of package.type">
+                    {{type.name}}
+                </div>
+            </div>
+            
+        </div>
+        <div class="right">
+            <h2>Details :</h2>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Price : </label>
+                <div class="col-sm-5">
+                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value={{package.price}}>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Flights : </label>
+                <div class="col-sm-5">
+                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="$ 95.6">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Hotel : </label>
+                <div class="col-sm-5">
+                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="$ 25.6">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Activities: </label>
+                <div class="col-sm-5" >
+                  <div style="width: 100%; font-weight:400" readonly class="form-control-plaintext" id="staticEmail">$ {{finalTotal}} </div>
+                  
+                </div>
+              </div>
+              
+              
+        </div>
+    </div>
+</section>
+
